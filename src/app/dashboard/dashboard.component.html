@@ -1,3 +1,927 @@
-<p>
-  dashboard works!
-</p>
+<header>
+  <!-- TOP BLACK BAR -->
+<div class="w-full bg-black text-white text-sm py-2 hidden md:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+    <div class="flex gap-4">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 2.5C4.33696 2.5 3.70107 2.76339 3.23223 3.23223C2.76339 3.70107 2.5 4.33696 2.5 5V11.0027C2.5 11.665 2.76311 12.3002 3.23145 12.7685C3.69979 13.2369 4.335 13.5 4.99733 13.5H11.0027C11.6649 13.5 12.3 13.237 12.7684 12.7687C13.2367 12.3006 13.4998 11.6655 13.5 11.0033C13.5 11.0033 13.5 11.0034 13.5 11.0033V4.99733C13.5 4.66938 13.4354 4.34464 13.3099 4.04165C13.1844 3.73866 13.0004 3.46335 12.7685 3.23145C12.5366 2.99955 12.2613 2.8156 11.9584 2.6901C11.6554 2.5646 11.3306 2.5 11.0027 2.5H5ZM5 1.5C4.07174 1.5 3.1815 1.86875 2.52513 2.52513C1.86875 3.1815 1.5 4.07174 1.5 5V11.0027C1.5 11.9302 1.86847 12.8198 2.52435 13.4757C3.18022 14.1315 4.06978 14.5 4.99733 14.5H11.0027C11.9301 14.5 12.8195 14.1316 13.4754 13.4759C14.1312 12.8202 14.4998 11.9309 14.5 11.0034V4.99733C14.5 4.53806 14.4095 4.08328 14.2338 3.65896C14.058 3.23465 13.8004 2.8491 13.4757 2.52435C13.1509 2.19959 12.7654 1.94198 12.341 1.76622C11.9167 1.59046 11.4619 1.5 11.0027 1.5H5Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.90002 8.6C6.90002 8.32386 7.12388 8.1 7.40002 8.1H11C11.2762 8.1 11.5 8.32386 11.5 8.6C11.5 8.87614 11.2762 9.1 11 9.1H7.40002C7.12388 9.1 6.90002 8.87614 6.90002 8.6Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.76484 5.76487C9.19055 5.33916 9.76793 5.1 10.37 5.1H11C11.2761 5.1 11.5 5.32386 11.5 5.6C11.5 5.87614 11.2761 6.1 11 6.1H10.37C10.0332 6.1 9.71012 6.23381 9.47195 6.47198C9.23378 6.71015 9.09998 7.03318 9.09998 7.37V14C9.09998 14.2761 8.87612 14.5 8.59998 14.5C8.32383 14.5 8.09998 14.2761 8.09998 14V7.37C8.09998 6.76796 8.33914 6.19058 8.76484 5.76487Z" fill="white"/>
+</svg>
+
+      <i class="fa-brands fa-facebook-f text-gray-300"></i>
+      <i class="fa-brands fa-linkedin-in text-gray-300"></i>
+      <i class="fa-brands fa-twitter text-gray-300"></i>
+      <i class="fa-regular fa-envelope text-gray-300"></i>
+    </div>
+
+    <div class="flex gap-4">
+      <a class="hover:text-green-400 cursor-pointer">Introduce</a>
+      <a class="hover:text-green-400 cursor-pointer">Partner Incentives</a>
+      <a class="hover:text-green-400 cursor-pointer">Promotion</a>
+      <a class="hover:text-green-400 cursor-pointer">Contact</a>
+      <a class="hover:text-green-400 cursor-pointer">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN SEARCH BAR -->
+<div class="w-full bg-white py-4 shadow">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+
+    <!-- MOBILE MENU -->
+    <button class="md:hidden text-3xl text-black">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- SEARCH BOX -->
+    <div class="hidden md:flex flex-1 justify-center">
+      <div class="flex w-[600px]">
+        <input
+          type="text"
+          class="flex-1 border px-4 py-3 rounded-l-full outline-none"
+          placeholder="What are you looking for?"
+        />
+
+        <select class="border px-4 py-3 text-gray-500">
+          <option>Category</option>
+        </select>
+
+        <button class="bg-green-500 text-white px-6 rounded-r-full">
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- ICONS -->
+    <div class="flex items-center gap-6 text-black text-xl">
+      <i class="fa-regular fa-heart cursor-pointer"></i>
+
+      <div class="relative cursor-pointer">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+          3
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NAVIGATION BAR -->
+<div class="hidden md:block w-full bg-white border-t">
+  <div class="max-w-7xl mx-auto flex items-center px-4 py-4 gap-10">
+
+    <div class="flex items-center gap-2 cursor-pointer">
+      <i class="fa-solid fa-list"></i>
+      <span>Category</span>
+      <i class="fa-solid fa-chevron-down text-xs"></i>
+    </div>
+
+    <a class="hover:text-green-600 cursor-pointer">Home</a>
+
+    <div class="flex items-center gap-1 cursor-pointer">
+      <span>New Product</span>
+      <i class="fa-solid fa-chevron-down text-xs"></i>
+    </div>
+
+    <div class="flex items-center gap-2 cursor-pointer">
+      <span>Promotion</span>
+      <span class="bg-orange-500 text-white text-xs px-2 rounded-full">HOT</span>
+    </div>
+
+    <div class="flex items-center gap-2 cursor-pointer">
+      <i class="fa-solid fa-truck"></i>
+      <span>Track Your Order</span>
+    </div>
+
+    <div class="flex items-center gap-2 cursor-pointer ml-auto">
+      <i class="fa-regular fa-user"></i>
+      <span>Sign In/Register</span>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE SEARCH (VISIBLE ONLY ON MOBILE) -->
+<div class="md:hidden bg-white py-3 px-4">
+  <input
+    type="text"
+    placeholder="Search..."
+    class="w-full border px-4 py-3 rounded-full outline-none"
+  />
+</div>
+
+</header>
+<section>
+  <div class="max-w-7xl mx-auto px-4 mt-6">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+
+    <!-- LEFT BIG CARD -->
+    <div class="bg-gray-100 rounded-xl p-8 flex flex-col justify-between h-[420px]">
+      <div>
+        <p class="text-sm text-gray-600 mb-4">Asus</p>
+        <h2 class="text-2xl font-semibold leading-snug">
+          Supper Sale <br />
+          Laptop Gaming
+        </h2>
+      </div>
+
+      <button class="bg-green-500 text-white px-6 py-2 rounded-full text-sm w-fit">
+        Order Now
+      </button>
+    </div>
+
+    <!-- CENTER HUGE HERO CARD (SPAN 2 COLS) -->
+    <div class="bg-gray-100 rounded-xl p-8 col-span-1 lg:col-span-2 h-[420px] flex flex-col justify-between relative">
+
+      <div>
+        <p class="text-sm text-gray-600">New Product</p>
+        <h1 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight">
+          HAND WATCH <br /> ROSSINI
+        </h1>
+
+        <button class="bg-green-500 text-white px-6 py-2 rounded-full text-sm mt-6 w-fit">
+          Buy Now
+        </button>
+      </div>
+
+      <!-- SLIDER ARROWS TOP RIGHT -->
+      <div class="absolute top-6 right-6 flex gap-4 text-xl">
+        <i class="fa-solid fa-chevron-left cursor-pointer"></i>
+        <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+      </div>
+
+      <!-- SLIDER DOTS BOTTOM RIGHT -->
+      <div class="absolute bottom-6 right-6 flex items-center gap-2">
+        <div class="w-2 h-2 bg-white rounded-full"></div>
+        <div class="w-6 h-2 bg-white rounded-full"></div>
+        <div class="w-2 h-2 bg-white rounded-full"></div>
+        <div class="w-2 h-2 bg-white rounded-full"></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT BIG DEAL -->
+    <div class="bg-gray-100 rounded-xl p-8 h-[420px] flex flex-col justify-between">
+      <div>
+        <p class="text-sm text-gray-600">Big deal</p>
+        <h2 class="text-xl font-semibold mt-4">
+          Black Friday <br /> Buy 1 Get 1
+        </h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SMALL CARDS ROW (BOTTOM) -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-4">
+
+    <!-- CARD 1 -->
+    <div class="bg-gray-100 rounded-xl p-6">
+      <p class="text-sm text-gray-600">Wine</p>
+      <h3 class="font-semibold mt-3 leading-snug">
+        Drunkenness <br />
+        Deep Flavor
+      </h3>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-gray-100 rounded-xl p-6">
+      <p class="text-sm text-gray-600">Cosmetic</p>
+      <h3 class="font-semibold mt-3 leading-snug">
+        MAXIMI <br />
+        Sale 50%
+      </h3>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-gray-100 rounded-xl p-6">
+      <p class="text-sm text-gray-600">Sunglasses</p>
+      <h3 class="font-semibold mt-3 leading-snug">
+        Authentic <br />
+        Sale off 50%
+      </h3>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-gray-100 rounded-xl p-6">
+      <p class="text-sm text-gray-600">Hand Wash</p>
+      <h3 class="font-semibold mt-3 leading-snug">
+        Clean hands <br />
+        Clean bacteria
+      </h3>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-gray-100 rounded-xl p-6">
+      <p class="text-sm text-gray-600">Fashion</p>
+      <h3 class="font-semibold mt-3 leading-snug">
+        Nice bag <br />
+        Nice style
+      </h3>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- section 2 -->
+ <section>
+
+   <div class="flex flex-wrap items-center gap-6 mb-10">
+
+     <!-- TAB -->
+  <div class="w-40 h-44 bg-gray-100 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer border-2 border-transparent hover:border-green-400 transition">
+    <img src="assets/icons/realestate.png" class="w-12 h-12" />
+    <span class="text-lg font-semibold">Real Estate</span>
+  </div>
+
+  <!-- TAB (ACTIVE) -->
+  <div class="relative w-40 h-44 bg-green-50 border-2 border-green-400 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer">
+    <img src="assets/icons/tech.png" class="w-12 h-12" />
+    <span class="text-lg font-semibold">Technology</span>
+
+    <!-- Green Pointer -->
+    <div class="absolute -bottom-2 w-4 h-4 bg-green-400 rotate-45"></div>
+  </div>
+
+  <div class="w-40 h-44 bg-gray-100 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer border-2 border-transparent hover:border-green-400 transition">
+    <img src="assets/icons/watch.png" class="w-12 h-12" />
+    <span class="text-lg font-semibold">Watch</span>
+  </div>
+
+  <div class="w-40 h-44 bg-gray-100 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer border-2 border-transparent hover:border-green-400 transition">
+    <img src="assets/icons/glasses.png" class="w-12 h-12" />
+    <span class="text-lg font-semibold">Glasses</span>
+  </div>
+
+  <div class="w-40 h-44 bg-gray-100 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer border-2 border-transparent hover:border-green-400 transition">
+    <img src="assets/icons/cosmetic.png" class="w-12 h-12" />
+    <span class="text-lg font-semibold">Cosmetic</span>
+  </div>
+
+  <div class="w-40 h-44 bg-gray-100 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer border-2 border-transparent hover:border-green-400 transition">
+    <img src="assets/icons/food.png" class="w-12 h-12" />
+    <span class="text-lg font-semibold">Food</span>
+  </div>
+
+  <button class="ml-auto text-green-500 text-sm font-medium cursor-pointer">See All</button>
+
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+  <!-- CARD -->
+  <div class="relative bg-gray-100 rounded-2xl p-5 flex flex-col justify-between">
+    <span class="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 rounded-md text-sm font-semibold">New</span>
+
+    <div class="w-full h-40 bg-white/40 rounded-xl flex items-center justify-center text-4xl text-gray-300 font-bold">
+      1:1
+    </div>
+
+    <p class="text-gray-500 text-sm mt-3">by Co., Ltd Minie Li</p>
+  </div>
+
+  <!-- CARD -->
+  <div class="relative bg-gray-100 rounded-2xl p-5 flex flex-col justify-between">
+    <span class="absolute top-3 left-3 bg-yellow-300 text-black px-3 py-1 rounded-md text-sm font-semibold">Favorite</span>
+
+    <div class="w-full h-40 bg-white/40 rounded-xl flex items-center justify-center text-4xl text-gray-300 font-bold">
+      1:1
+    </div>
+
+    <p class="text-gray-500 text-sm mt-3">by 247 Store</p>
+  </div>
+
+  <!-- CARD -->
+  <div class="relative bg-gray-100 rounded-2xl p-5 flex flex-col justify-between">
+    <span class="absolute top-3 left-3 bg-orange-400 text-white px-3 py-1 rounded-md text-sm font-semibold">- 15%</span>
+
+    <div class="w-full h-40 bg-white/40 rounded-xl flex items-center justify-center text-4xl text-gray-300 font-bold">
+      1:1
+    </div>
+
+    <p class="line-through text-gray-400 text-sm mt-2">$1188.71</p>
+    <p class="text-gray-500 text-sm">by Kimpine Calculator</p>
+  </div>
+
+  <!-- CARD -->
+  <div class="relative bg-gray-100 rounded-2xl p-5 flex flex-col justify-between">
+    <span class="absolute top-3 left-3 bg-gray-300 text-black px-3 py-1 rounded-md text-sm font-semibold">Sold Out</span>
+
+    <div class="w-full h-40 bg-white/40 rounded-xl flex items-center justify-center text-4xl text-gray-300 font-bold">
+      1:1
+    </div>
+
+    <p class="text-gray-500 text-sm mt-3">by Co., Ltd Minie Li</p>
+  </div>
+
+</div>
+</section>
+
+<!-- section 3 -->
+ <section>
+  <!-- Feature Cards Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+
+  <!-- Left Card -->
+  <div class="bg-gray-100 p-10 rounded-xl flex flex-col justify-between h-[350px]">
+    <div>
+      <p class="text-sm text-gray-600">Hot Deal</p>
+
+      <h2 class="text-3xl font-semibold mt-4">
+        TOURS SAFE <br />
+        TRUE DISCOUNT
+      </h2>
+    </div>
+
+    <button
+      class="mt-6 bg-lime-500 text-white px-6 py-2 rounded-lg text-sm font-medium w-fit hover:bg-lime-600 transition">
+      Order Now
+    </button>
+  </div>
+
+  <!-- Right Card -->
+  <div class="bg-gray-100 p-10 rounded-xl flex flex-col justify-between h-[350px]">
+    <div>
+      <p class="text-sm text-gray-600">New Product</p>
+
+      <h2 class="text-3xl font-semibold mt-4">
+        EXPERIENCE TECHNOLOGY <br />
+        RELAX HIGHTLY
+      </h2>
+    </div>
+
+    <button
+      class="mt-6 bg-lime-500 text-white px-6 py-2 rounded-lg text-sm font-medium w-fit hover:bg-lime-600 transition">
+      Order Now
+    </button>
+  </div>
+
+</div>
+
+ </section>
+
+ <!-- section 4 -->
+    <section class="w-full py-12">
+  <div class="container mx-auto px-4">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-semibold">Flash Sale</h2>
+      <a class="text-green-500 font-medium cursor-pointer">See All</a>
+    </div>
+
+    <!-- Flash Sale Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+
+        <!-- Discount Badge -->
+        <span class="bg-orange-400 text-white text-sm px-3 py-1 rounded-md w-fit">
+          - 15%
+        </span>
+
+        <!-- Image Box -->
+        <div class="bg-gray-100 h-64 rounded-lg mt-4 flex items-center justify-center text-gray-300 text-5xl">
+          1:1
+        </div>
+
+        <!-- Price -->
+        <p class="text-gray-500 text-sm mt-4 line-through">$1183.77</p>
+
+        <!-- Progress Line -->
+        <div class="flex justify-between text-sm text-gray-600 mt-2">
+          <span>Sold: 700</span>
+          <span>In Stock: 300</span>
+        </div>
+
+        <div class="w-full h-2 bg-gray-200 rounded-full mt-1">
+          <div class="h-full bg-green-500 rounded-full" style="width: 70%"></div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="flex items-center gap-4 mt-6">
+
+          <!-- Day -->
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              123
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Day</span>
+          </div>
+
+          <!-- Hour -->
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              42
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Hour</span>
+          </div>
+
+          <!-- Min -->
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              00
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Min</span>
+          </div>
+
+          <!-- Sec -->
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              08
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Sec</span>
+          </div>
+
+        </div>
+
+        <!-- Button -->
+        <button class="bg-green-500 hover:bg-green-600 text-white w-full py-3 rounded-lg mt-6 font-medium">
+          Add To Cart
+        </button>
+      </div>
+
+      <!-- CARD 2 (duplicate of card 1) -->
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+
+        <span class="bg-orange-400 text-white text-sm px-3 py-1 rounded-md w-fit">
+          - 12%
+        </span>
+
+        <div class="bg-gray-100 h-64 rounded-lg mt-4 flex items-center justify-center text-gray-300 text-5xl">
+          1:1
+        </div>
+
+        <p class="text-gray-500 text-sm mt-4 line-through">$593.98</p>
+
+        <div class="flex justify-between text-sm text-gray-600 mt-2">
+          <span>Sold: 700</span>
+          <span>In Stock: 300</span>
+        </div>
+
+        <div class="w-full h-2 bg-gray-200 rounded-full mt-1">
+          <div class="h-full bg-green-500 rounded-full" style="width: 65%"></div>
+        </div>
+
+        <div class="flex items-center gap-4 mt-6">
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              123
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Day</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              42
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Hour</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              00
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Min</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-lg bg-white border flex items-center justify-center text-lg font-medium">
+              08
+            </div>
+            <span class="text-xs mt-1 text-gray-600">Sec</span>
+          </div>
+        </div>
+
+        <button class="bg-green-500 hover:bg-green-600 text-white w-full py-3 rounded-lg mt-6 font-medium">
+          Add To Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- section 5 -->
+ <section class="w-full bg-gray-100 py-24">
+  <div class="container mx-auto px-6 flex items-center justify-end">
+
+    <!-- Right Side Text Content -->
+    <div class="text-right space-y-6 max-w-xl">
+
+      <p class="text-gray-400 text-lg">New Product</p>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        FASHIONABLE WALLETS
+      </h2>
+
+      <h3 class="text-3xl md:text-4xl font-semibold text-gray-900">
+        BIG GOOD SALE FOR HER
+      </h3>
+
+      <button
+        class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium">
+        Order Now
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- section 6 -->
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 py-10">
+
+    <!-- Product Card -->
+    <div class="rounded-xl shadow-md bg-white p-4 relative">
+
+        <!-- Badge -->
+        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full">
+            New
+        </span>
+
+        <!-- Image Placeholder -->
+        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400 text-3xl">
+            1:1
+        </div>
+
+        <!-- Store Name -->
+        <p class="text-xs text-gray-400 mt-3">
+            by <a class="text-blue-500 cursor-pointer">Co., Ltd Minla Li</a>
+        </p>
+
+    </div>
+
+    <!-- Favorite Product -->
+    <div class="rounded-xl shadow-md bg-white p-4 relative">
+
+        <span class="absolute top-4 left-4 bg-yellow-400 text-black text-xs px-3 py-1 rounded-full">
+            Favorite
+        </span>
+
+        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400 text-3xl">
+            1:1
+        </div>
+
+        <p class="text-xs text-gray-400 mt-3">
+            by <a class="text-blue-500 cursor-pointer">247 Store</a>
+        </p>
+
+    </div>
+
+    <!-- Discount Product -->
+    <div class="rounded-xl shadow-md bg-white p-4 relative">
+
+        <span class="absolute top-4 left-4 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+            - 15%
+        </span>
+
+        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400 text-3xl">
+            1:1
+        </div>
+
+        <p class="text-xs text-gray-400 mt-3">
+            by <a class="text-blue-500 cursor-pointer">Kimpline Calculator</a>
+        </p>
+
+    </div>
+
+    <!-- Sold Out -->
+    <div class="rounded-xl shadow-md bg-white p-4 relative">
+
+        <span class="absolute top-4 left-4 bg-gray-300 text-black text-xs px-3 py-1 rounded-full">
+            Sold Out
+        </span>
+
+        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400 text-3xl">
+            1:1
+        </div>
+
+        <p class="text-xs text-gray-400 mt-3">
+            by <a class="text-blue-500 cursor-pointer">Kimpline Calculator</a>
+        </p>
+
+    </div>
+
+    <!-- Add to Cart Card -->
+    <div class="rounded-xl shadow-md bg-white p-4 relative">
+
+        <div class="flex gap-3 absolute top-4 right-4">
+            <button class="bg-black text-green-300 p-2 rounded-lg">
+                ❤️
+            </button>
+            <button class="bg-black text-green-300 p-2 rounded-lg">
+                👁
+            </button>
+        </div>
+
+        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400 text-3xl">
+            1:1
+        </div>
+
+        <button class="w-full mt-4 bg-green-500 text-white py-2 rounded-lg">
+            Add To Cart
+        </button>
+
+        <p class="text-xs text-gray-400 mt-3">
+            by <a class="text-blue-500 cursor-pointer">Co., Ltd Minla Li</a>
+        </p>
+
+    </div>
+
+    <!-- Another Product -->
+    <div class="rounded-xl shadow-md bg-white p-4 relative">
+
+        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400 text-3xl">
+            1:1
+        </div>
+
+        <p class="text-xs text-gray-400 mt-3">
+            by <a class="text-blue-500 cursor-pointer">Co., Ltd Flower in</a>
+        </p>
+
+    </div>
+
+</div>
+
+<!-- section 7 -->
+ <section>
+  <div class="w-full px-10 py-10">
+  <div class="flex gap-10 overflow-x-auto">
+
+    <!-- CARD 1 -49% -->
+    <div class="min-w-[260px] rounded-xl shadow bg-white p-4 relative">
+      <span class="absolute top-4 left-4 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+        - 49%
+      </span>
+
+      <div class="w-full aspect-square bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+        <span class="text-xs mb-2">Image Ratio</span>
+        <span class="text-4xl opacity-30">1:1</span>
+      </div>
+
+      <p class="mt-4 text-gray-600">$258.21</p>
+
+      <p class="text-xs text-gray-400 mt-1">
+        by <a class="text-blue-500 cursor-pointer">Co., Ltd Minla Li</a>
+      </p>
+    </div>
+
+    <!-- CARD 2 -12% -->
+    <div class="min-w-[260px] rounded-xl shadow bg-white p-4 relative">
+      <span class="absolute top-4 left-4 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+        - 12%
+      </span>
+
+      <div class="w-full aspect-square bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+        <span class="text-xs mb-2">Image Ratio</span>
+        <span class="text-4xl opacity-30">1:1</span>
+      </div>
+
+      <p class="mt-4 text-gray-600">$94.32</p>
+
+      <p class="text-xs text-gray-400 mt-1">
+        by <a class="text-blue-500 cursor-pointer">Co., Ltd SMART MARKETING</a>
+      </p>
+    </div>
+
+    <!-- CARD 3 -5% -->
+    <div class="min-w-[260px] rounded-xl shadow bg-white p-4 relative">
+      <span class="absolute top-4 left-4 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+        - 5%
+      </span>
+
+      <div class="w-full aspect-square bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+        <span class="text-xs mb-2">Image Ratio</span>
+        <span class="text-4xl opacity-30">1:1</span>
+      </div>
+
+      <p class="mt-4 text-gray-600">$193.31</p>
+
+      <p class="text-xs text-gray-400 mt-1">
+        by <a class="text-blue-500 cursor-pointer">Co., Ltd Minla Li</a>
+      </p>
+    </div>
+
+    <!-- CARD 4 NEW -->
+    <div class="min-w-[260px] rounded-xl shadow bg-white p-4 relative">
+      <span class="absolute top-4 left-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full">
+        New
+      </span>
+
+      <div class="w-full aspect-square bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+        <span class="text-xs mb-2">Image Ratio</span>
+        <span class="text-4xl opacity-30">1:1</span>
+      </div>
+
+      <p class="mt-4 text-gray-600">$178.00</p>
+
+      <p class="text-xs text-gray-400 mt-1">
+        by <a class="text-blue-500 cursor-pointer">Co., Ltd SMART MARKETING</a>
+      </p>
+    </div>
+
+    <!-- CARD 5 NEW -->
+    <div class="min-w-[260px] rounded-xl shadow bg-white p-4 relative">
+      <span class="absolute top-4 left-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full">
+        New
+      </span>
+
+      <div class="w-full aspect-square bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+        <span class="text-xs mb-2">Image Ratio</span>
+        <span class="text-4xl opacity-30">1:1</span>
+      </div>
+
+      <p class="mt-4 text-gray-600">$241.10</p>
+
+      <p class="text-xs text-gray-400 mt-1">
+        by <a class="text-blue-500 cursor-pointer">Mobile World</a>
+      </p>
+    </div>
+
+    <!-- CARD 6 (no badge) -->
+    <div class="min-w-[260px] rounded-xl shadow bg-white p-4 relative">
+
+      <div class="w-full aspect-square bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+        <span class="text-xs mb-2">Image Ratio</span>
+        <span class="text-4xl opacity-30">1:1</span>
+      </div>
+
+      <p class="mt-4 text-gray-600">$212.88</p>
+
+      <p class="text-xs text-gray-400 mt-1">
+        by <a class="text-blue-500 cursor-pointer">Co., Ltd Minla Li</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+ </section>
+
+ <!-- section 8 -->
+ <!-- section 9 -->
+
+ <!-- section 10 -->
+
+ <!-- section 11 -->
+  <section>
+    <div class="w-full px-10 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="border border-gray-700 rounded-2xl p-10 flex flex-col items-center text-center">
+      <!-- Icon -->
+      <div class="text-4xl mb-6">
+        <!-- Replace with your SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+        </svg>
+      </div>
+
+      <!-- Text -->
+      <p class="text-gray-400">For invoices</p>
+      <p class="text-gray-400 mt-1">over $1,500</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="border border-gray-700 rounded-2xl p-10 flex flex-col items-center text-center">
+      <!-- Icon -->
+      <div class="text-4xl mb-6">
+        <!-- Replace with your SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" />
+        </svg>
+      </div>
+
+      <!-- Text -->
+      <p class="text-gray-400">When paying for products</p>
+      <p class="text-gray-400 mt-1">via Dason Wallet</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="border border-gray-700 rounded-2xl p-10 flex flex-col items-center text-center">
+      <!-- Icon -->
+      <div class="text-4xl mb-6">
+        <!-- Replace with your SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 11.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 12v.01M20 12v.01M9 20v.01M15 20v.01M9 4v.01M15 4v.01" />
+        </svg>
+      </div>
+
+      <!-- Text -->
+      <p class="text-gray-400">When something goes</p>
+      <p class="text-gray-400 mt-1">wrong</p>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- footer -->
+   <footer class="bg-black text-gray-300 px-6 md:px-20 py-16 font-light">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+    <!-- CONTACT -->
+    <div>
+      <h3 class="text-xl text-white mb-6">Contact</h3>
+      <p class="mb-6">ftribe Co., Ltd</p>
+
+      <div class="flex items-start gap-3 mb-4">
+        <span class="text-lime-400">📍</span>
+        <p>
+          1658 Rosewood Lane <br />
+          New York city, NY
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-lime-400">📞</span>
+        <p>212 929 9953</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="text-lime-400">✉️</span>
+        <p>adminftribe.com</p>
+      </div>
+    </div>
+
+    <!-- COOPERATION -->
+    <div>
+      <h3 class="text-xl text-white mb-6">Cooperation - Association</h3>
+
+      <ul class="space-y-4">
+        <li>Operation Regulation of EC-Exchange</li>
+        <li>Return Policy</li>
+        <li>Privacy Policy</li>
+        <li>Selling With ftribe</li>
+      </ul>
+    </div>
+
+    <!-- CUSTOMER SUPPORT -->
+    <div>
+      <h3 class="text-xl text-white mb-6">Customer Support</h3>
+
+      <ul class="space-y-4">
+        <li>
+          Hotline Customer Service <br />
+          <span class="text-lime-400">212 929 9953</span>
+        </li>
+
+        <li>Frequently asked Questions</li>
+        <li>Submit Support Request</li>
+        <li>Ordering Guide</li>
+        <li>Shipping Methods</li>
+      </ul>
+    </div>
+
+    <!-- INSTALLMENT PURCHASE / SUPPORT -->
+    <div>
+      <h3 class="text-xl text-white mb-6">Installment Purchase Guide</h3>
+
+      <ul class="space-y-4">
+        <li>Import Policy</li>
+
+        <li>
+          Customer Support: <br />
+          <span class="text-lime-400">customerftribe.com</span>
+        </li>
+
+        <li>
+          Security Error Report: <br />
+          <span class="text-lime-400">adminftribe.com</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM SECTION -->
+  <div class="border-t border-gray-700 mt-16 pt-8 flex flex-col items-center space-y-6 md:space-y-0 md:flex-row md:justify-between">
+
+    <p class="text-sm">Copyright 2020 © ftribe</p>
+
+    <div class="flex flex-wrap items-center gap-4 text-sm">
+      <a href="#" class="hover:text-white">Introduce</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Partner Incentives</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Promotion</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Contact</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Frequently asked Questions</a>
+    </div>
+
+  </div>
+</footer>
+
