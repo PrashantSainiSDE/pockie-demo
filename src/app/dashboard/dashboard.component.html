@@ -172,6 +172,9 @@
             class="border px-7 py-3 rounded-r-lg bg-gray-100 text-gray-600 outline-none"
           >
             <option>Category</option>
+            @for(category of categories; track category.id) {
+            <option>{{category.name}}</option>
+            }
           </select>
 
           <button class="bg-green-500 mx-2 text-white px-6 rounded-lg">
@@ -302,6 +305,9 @@
 </div>
         <select name="" id="" class="w-full md:w-32">
           <option>Category</option>
+          @for(category of categories; track category.id) {
+            <option>{{category.name}}</option>
+            }
         </select>
       </div>
 
@@ -311,6 +317,11 @@
 
         <select class="w-full md:w-32">
           <option>New Product</option>
+          @for(product of products; track product.id) {
+            @if (product.isNew) {
+              <option>{{product.title}}</option>
+            }
+            }
         </select>
 
         <a class="flex items-center gap-2 cursor-pointer">
@@ -384,123 +395,113 @@
 <!-- section 1 -->
 <section>
   <div class="container mx-auto mt-6">
-    <!-- GRID WRAPPER -->
-    <div class="grid grid-cols-1 md:grid-cols-6 grid-rows-3 gap-4">
-      <!-- LEFT BIG CARD -->
-      <div class="bg-gray-100 rounded-xl p-8 order-2 flex flex-col justify-between text-center md:row-span-3 md:order-1">
-        <div>
-          <p class="text-sm text-gray-600 mb-4">Asus</p>
-          <h2 class="text-2xl font-semibold leading-snug">
-            Supper Sale <br />
-            Laptop Gaming
-          </h2>
-        </div>
 
-        <button
-          class="bg-green-500 text-white px-6 py-2 rounded-full text-sm w-fit"
-        >
-          Order Now
-        </button>
+    <!-- GRID WRAPPER -->
+    <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-3 gap-4">
+
+      @for(banner of banners; track banner.title) {
+
+         @if(banner.type == 'left') {
+    <div class="relative bg-gray-100 p-8 rounded-xl flex flex-col gap-y-3 justify-between items-start md:items-center md:row-span-3 md:order-first">
+
+          <!-- <img [src]="banner.images[0]" alt="" class="object-cover h-full opacity-90"/> -->
+          <div class="flex flex-col gap-y-4 max-w-2/3 md:text-center md:max-w-full">
+            <p class="text-sm text-gray-600">{{banner.subtitle}}</p>
+            <p class="text-2xl font-semibold leading-snug">
+              {{banner.title}}
+            </p>
+            </div>
+
+            <div class="">
+              <button
+                class="bg-lime-500 text-white px-6 py-2 rounded-md text-sm "
+              >
+                {{banner.button}}
+              </button>
+          </div>
+
       </div>
 
-      <!-- center hero  -->
-      <div class="bg-gray-100 rounded-xl p-8 order-1 col-span-1 md:col-span-3 row-span-2 flex flex-col justify-between relative">
+           }
+           @else if (banner.type == 'hero') {
+             <div class="bg-gray-100 rounded-xl p-8 md:col-span-3 md:row-span-2 flex flex-col justify-between relative">
         <div>
-          <p class="text-sm text-gray-600">New Product</p>
-          <h1 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight">
-            HAND WATCH <br />
-            ROSSINI
-          </h1>
+          <p class="text-sm text-gray-600">{{banner.subtitle}}</p>
+          <p class="text-4xl max-w-full md:text-5xl font-semibold mt-4 leading-tight md:max-w-34">
+            {{banner.title}}
+          </p>
 
           <button
-            class="bg-green-500 text-white px-6 py-2 rounded-full text-sm mt-6 w-fit"
+            class="bg-lime-500 text-white px-6 py-2 rounded-md text-sm mt-6 w-fit"
           >
-            Buy Now
+            {{banner.button}}
           </button>
         </div>
 
         <!-- SLIDER ARROWS TOP RIGHT -->
-        <div class="absolute top-6 right-6 flex gap-4 text-xl">
-          <i class="fa-solid fa-chevron-left cursor-pointer"></i>
-          <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+        <div class="absolute top-6 right-6 flex items-center gap-2 text-xl">
+
+        <button>
+<svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.7688 11.2312C19.0771 11.5395 19.0771 12.0394 18.7688 12.3477L15.1165 16L18.7688 19.6523C19.0771 19.9606 19.0771 20.4605 18.7688 20.7688C18.4605 21.0771 17.9606 21.0771 17.6523 20.7688L13.4418 16.5582C13.1334 16.2499 13.1334 15.7501 13.4418 15.4418L17.6523 11.2312C17.9606 10.9229 18.4605 10.9229 18.7688 11.2312Z"
+            fill="#D6D6D6"
+          />
+        </svg>
+        </button>
+
+
+        <button>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.2312 20.7688C12.9229 20.4605 12.9229 19.9606 13.2312 19.6523L16.8835 16L13.2312 12.3477C12.9229 12.0394 12.9229 11.5395 13.2312 11.2312C13.5395 10.9229 14.0394 10.9229 14.3477 11.2312L18.5582 15.4418C18.8666 15.7501 18.8666 16.2499 18.5582 16.5582L14.3477 20.7688C14.0394 21.0771 13.5395 21.0771 13.2312 20.7688Z"
+              fill="black"
+            />
+          </svg>
+        </button>
         </div>
+      </div>
+           }
 
-        <!-- SLIDER DOTS BOTTOM RIGHT -->
-        <div class="absolute bottom-6 right-6 flex items-center gap-2">
-          <div class="w-2 h-2 bg-white rounded-full"></div>
-          <div class="w-6 h-2 bg-white rounded-full"></div>
-          <div class="w-2 h-2 bg-white rounded-full"></div>
-          <div class="w-2 h-2 bg-white rounded-full"></div>
+           @else if (banner.type == 'right') {
+             <div class="bg-gray-100 rounded-xl p-8 flex flex-col justify-between lg:col-span-2">
+        <div class="flex flex-col gap-y-4 max-w-2/3">
+          <p class="text-sm text-gray-600">{{banner.subtitle}}</p>
+          <p class="text-xl max-w-full font-semibold">
+            {{banner.title}}
+          </p>
         </div>
       </div>
-
-      <!-- RIGHT BIG DEAL -->
-      <div class="bg-gray-100 rounded-xl p-8 order-3 flex flex-col justify-between lg:col-span-2">
-        <div>
-          <p class="text-sm text-gray-600">Big deal</p>
-          <h2 class="text-xl font-semibold mt-4">
-            Black Friday <br />
-            Buy 1 Get 1
-          </h2>
-        </div>
+           }
+           @else {
+             <div class="bg-gray-100 rounded-xl p-8">
+              <div class="flex flex-col gap-y-4 max-w-2/3 md:max-w-full">
+                <p class="text-sm text-gray-600">{{banner.subtitle}}</p>
+                <p class="font-semibold leading-snug">
+                  {{banner.title}}
+                </p>
+              </div>
       </div>
+           }
 
-      <div class="bg-gray-100 rounded-xl p-8 order-4 flex flex-col justify-between lg:col-span-2">
-        <div>
-          <p class="text-sm text-gray-600">Fujiwa</p>
-          <h2 class="text-xl font-semibold mt-4">
-            ION Alkaline <br />
-            Micronutrient Supplements
-          </h2>
-        </div>
+      }
       </div>
-
-      <!-- small cards -->
-      <!-- CARD 1 -->
-      <div class="bg-gray-100 rounded-xl p-6 order-5">
-        <p class="text-sm text-gray-600">Wine</p>
-        <h3 class="font-semibold mt-3 leading-snug">
-          Drunkenness <br />
-          Deep Flavor
-        </h3>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="bg-gray-100 rounded-xl p-6 order-6">
-        <p class="text-sm text-gray-600">Cosmetic</p>
-        <h3 class="font-semibold mt-3 leading-snug">
-          MAXIMI <br />
-          Sale 50%
-        </h3>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="bg-gray-100 rounded-xl p-6 order-7">
-        <p class="text-sm text-gray-600">Sunglasses</p>
-        <h3 class="font-semibold mt-3 leading-snug">
-          Authentic <br />
-          Sale off 50%
-        </h3>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="bg-gray-100 rounded-xl p-6 order-8">
-        <p class="text-sm text-gray-600">Hand Wash</p>
-        <h3 class="font-semibold mt-3 leading-snug">
-          Clean hands <br />
-          Clean bacteria
-        </h3>
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="bg-gray-100 rounded-xl p-6 order-9">
-        <p class="text-sm text-gray-600">Fashion</p>
-        <h3 class="font-semibold mt-3 leading-snug">
-          Nice bag <br />
-          Nice style
-        </h3>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -2197,7 +2198,7 @@
 </section>
 
 <!-- section 11 -->
-<section class="container mx-auto px">
+<section class="container mx-auto px-3">
   <div class="py-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Card 1 -->
