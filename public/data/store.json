@@ -3,32 +3,125 @@
     {
       "id": 1,
       "name": "Real Estate",
-      "icon": "assets/icons/realestate.svg"
+      "icon": "icon/realEstate.svg",
+      "subcategories": [
+        {
+          "id": 11,
+          "name": "House"
+        },
+        {
+          "id": 12,
+          "name": "Land"
+        },
+        {
+          "id": 13,
+          "name": "House for rent"
+        },
+        {
+          "id": 14,
+          "name": "Land for rent"
+        },
+        {
+          "id": 15,
+          "name": "Project"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Technology",
-      "icon": "assets/icons/electronics.svg"
+      "icon": "icon/technology.svg",
+      "subcategories": [
+        {
+          "id": 21,
+          "name": "Smart Watch"
+        },
+        {
+          "id": 22,
+          "name": "Laptop"
+        },
+        {
+          "id": 23,
+          "name": "Tablet"
+        },
+        {
+          "id": 24,
+          "name": "Desktop"
+        },
+        {
+          "id": 25,
+          "name": "Accessories"
+        }
+      ]
     },
-      {
-        "id": 3,
-        "name": "Watch",
-        "icon": "assets/icons/fashion.svg"
-      },
-      {
+    {
+      "id": 3,
+      "name": "Watch",
+      "icon": "icon/watch.svg",
+      "subcategories":[
+        {
+          "id": 31,
+          "name": "Men's Watch"
+        },
+        {
+          "id": 32,
+          "name": "Women's Watch"
+        },
+        {
+          "id": 33,
+          "name": "Smart Watch"
+        }
+      ]
+    },
+    {
       "id": 4,
       "name": "Glasses",
-      "icon": "assets/icons/sunglasses.svg"
-      },
+      "icon": "icon/glasses.svg",
+      "subcategories":[
+
+      ]
+    },
     {
       "id": 5,
       "name": "Cosmetic",
-      "icon": "assets/icons/cosmetic.svg"
+      "icon": "icon/cosmetic.svg",
+      "subcategories":[
+        {
+          "id": 51,
+          "name": "Lotion"
+        },
+        {
+          "id": 52,
+          "name": "Mask"
+        },
+        {
+          "id": 53,
+          "name": "Perfume"
+        }
+      ]
     },
     {
       "id": 6,
       "name": "Food",
-      "icon": "assets/icons/wine.svg"
+      "icon": "icon/food.svg",
+      "subcategories":[
+        {
+          "id": 61,
+          "name": "Drinks - Preparation"
+        },
+        {
+          "id": 62,
+          "name": "Cereals"
+        },
+        {
+          "id": 63,
+          "name": "Drink"
+        },
+        {
+          "id": 64,
+          "name": "Resources"
+        }
+      ]
     }
   ],
 
@@ -36,56 +129,97 @@
     {
       "id": 101,
       "title": "Hand Watch Rossini",
-      "description": "Premium classic hand watch",
+      "company": "co., Ltd Minie Li",
       "categoryId": 2,
       "price": 150,
       "discount": 10,
-      "images": ["assets/products/watch1.png"],
+      "images": ["banner/image2.png"],
       "isNew": true,
+      "isFavorite": false,
       "stock": 10
     },
     {
       "id": 102,
       "title": "Gaming Laptop Asus",
-      "description": "High performance laptop for gaming",
+      "company": "co., Ltd Minie Li",
       "categoryId": 2,
       "price": 1200,
       "discount": 15,
-      "images": ["assets/products/laptop1.png"],
+      "images": ["banner/image2.png"],
       "isNew": false,
-      "stock": 8
+      "isFavorite": false,
+      "stock": 0
     },
     {
       "id": 103,
       "title": "Drunkenness Deep Flavor Wine",
-      "description": "Special flavour wine",
+      "company": "co., Ltd Minie Li",
       "categoryId": 5,
       "price": 50,
       "discount": 5,
-      "images": ["assets/products/wine1.png"],
+      "images": ["banner/image2.png"],
       "isNew": false,
+      "isFavorite": false,
       "stock": 20
     },
     {
       "id": 104,
       "title": "Maximi Cosmetic Pack",
-      "description": "Beauty cosmetic kit",
+      "company": "co., Ltd Minie Li",
       "categoryId": 3,
       "price": 80,
       "discount": 50,
-      "images": ["assets/products/cosmetic1.png"],
+      "images": ["banner/image2.png"],
       "isNew": true,
+      "isFavorite": false,
       "stock": 12
     },
     {
       "id": 105,
       "title": "Authentic Sunglasses",
-      "description": "Stylish sunglasses",
+      "company": "co., Ltd Minie Li",
       "categoryId": 4,
       "price": 35,
       "discount": 50,
-      "images": ["assets/products/sunglass1.png"],
+      "images": ["banner/image2.png"],
       "isNew": false,
+      "isFavorite": true,
+      "stock": 18
+    },
+    {
+      "id": 106,
+      "title": "Authentic Sunglasses",
+      "company": "co., Ltd Minie Li",
+      "categoryId": 1,
+      "price": 35,
+      "discount": 50,
+      "images": ["banner/image2.png"],
+      "isNew": false,
+      "isFavorite": true,
+      "stock": 18
+    },
+    {
+      "id": 107,
+      "title": "Authentic Sunglasses",
+      "company": "co., Ltd Minie Li",
+      "categoryId": 1,
+      "price": 35,
+      "discount": 50,
+      "images": ["banner/image2.png"],
+      "isNew": false,
+      "isFavorite": true,
+      "stock": 18
+    },
+    {
+      "id": 108,
+      "title": "Authentic Sunglasses",
+      "company": "co., Ltd Minie Li",
+      "categoryId": 1,
+      "price": 35,
+      "discount": 50,
+      "images": ["banner/image2.png"],
+      "isNew": false,
+      "isFavorite": true,
       "stock": 18
     }
   ],
@@ -140,8 +274,8 @@
       "images": ["assets/banners/bigdeal.png"],
       "type": "smallBanner"
     },
-{
-    "title": "Clean hands Clean bacteria",
+    {
+      "title": "Clean hands Clean bacteria",
       "subtitle": "Hand Wash",
       "button": "",
       "images": ["assets/banners/bigdeal.png"],
